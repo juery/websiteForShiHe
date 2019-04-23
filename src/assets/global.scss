@@ -1,0 +1,168 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Microsoft YaHei",Helvetica Neue,Helvetica,微软雅黑,STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif
+}
+
+h3 {
+	text-align: center;
+	font-weight: normal;
+}
+
+.vc {
+	display: -webkit-box;
+	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;
+	/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;
+	/* TWEENER - IE 10 */
+	display: -webkit-flex;
+	/* NEW - Chrome */
+	display: flex;
+	box-align: center;
+	-webkit-box-align: center;
+	/* y */
+	-moz-box-align: center;
+	-ms-box-align: center;
+	-webkit-align-content: center;
+	-moz-align-content: center;
+	-ms-align-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.flex {
+	flex: 1;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	.menu {
+		width: 832px;
+		margin: 0 auto;
+		padding-top: 8px;
+		justify-content: space-between;
+		.logo {
+			text-align: center;
+			img {
+				width: 42px;
+				height: 48px;
+			}
+			span {
+				display: block;
+				color: #0A9AFF;
+				font-size: 14px;
+			}
+		}
+		ul {
+			clear: both;
+			// overflow: hidden;
+			display: inline-block;
+			padding: 8px;
+			// width: 617px;
+			text-align: right;
+			li {
+				float: left;
+				margin: 0px 35px;
+				font-size: 16px; // ignored
+				&:last-child {
+					margin-right: 0px;
+				}
+				&:first-child {
+					margin-left: 0px;
+				}
+				a {
+					color: #30CCFF;
+					text-decoration: none;
+					cursor: pointer;
+					&.active {
+						color: #fff;
+						position: relative;
+						&:after {
+							content: '';
+							position: absolute;
+							width: 26px;
+							height: 2px;
+							background-color:#0F91E5;
+							bottom: -6px;
+							left: 50%;
+							margin-left: -13px;
+						}
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+footer {
+	background: #000000;
+	.footer-cover {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		overflow: hidden;
+		background-image: url('../../public/common-f-1.png');
+		text-align: center;
+		padding: 70px 0px;
+	}
+	.footer-main {
+		width: 1020px;
+		margin: 0 auto;
+		.qrcode {
+			width: 154px;
+			margin-right: 60px;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			span {
+				color: #6686AA;
+				font-size: 12px;
+				display: inline-block;
+				margin-top: 10px;
+			}
+		}
+	}
+	.borderwhite {
+		padding: 7px;
+		background-color: #fff;
+	}
+	.company-info {
+		text-align: left;
+		p {
+			color: #fff;
+			font-size: 18px;
+			margin-bottom: 14px;
+		}
+		span {
+			display: inline-block;
+			color: #fff;
+			font-size: 14px;
+			margin-bottom: 41px;
+		}
+		li {
+			color: #6686AA;
+			font-size: 14px;
+			margin-bottom: 15px;
+			img {
+				vertical-align: middle;
+				width: 20px;
+				height: 20px;
+			}
+		}
+		li.gray {
+			color: #696969;
+			font-size: 12px;
+		}
+	}
+}
